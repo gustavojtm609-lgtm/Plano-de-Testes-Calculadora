@@ -6,11 +6,15 @@
   "type": "module",
   "scripts": {
     "dev": "node --watch src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env TEST=true node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
   },
   "author": "Renan Ponick",
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "jest": "^30.4.2"
   }
 }

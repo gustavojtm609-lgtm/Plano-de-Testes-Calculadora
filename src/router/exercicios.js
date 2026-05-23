@@ -8,4 +8,4 @@ router.post("/subtrair", Controller.subtrair)
 router.post("/multiplicar", Controller.Somar)
 router.post("/dividir", Controller.Dividir)
 
-export router
+export default router;
