@@ -1,5 +1,5 @@
 import { describe, it, expect } from '@jest/globals';
-import service from '../src/services/exercicios';
+import service from '../../src/services/exercicios';
 
 //=============================================================//
 //                           SOMAR                             //

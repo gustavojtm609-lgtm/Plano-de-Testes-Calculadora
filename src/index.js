@@ -6,6 +6,11 @@ app.use(express.json())
 
 app.use('/api', router)
 
-app.listen(3000, () => {
-    console.log("Servidor rodando na porta 3000")
-})
+// Esta verificação impede que o servidor suba durante os testes
+if (process.env.NODE_ENV !== 'test' && process.env.TEST !== 'true') { 
+    app.listen(3000, () => {
+        console.log("Servidor rodando na porta 3000");
+    }); 
+}
+
+export default app;
